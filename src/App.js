@@ -27,8 +27,7 @@ class App extends React.Component {
             <option value="Linear Search">Linear Search</option>
           </select>
         </div>
-        <br />
-      {contents}  
+        {contents}  
       </div>
     );
   }

@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+.app {
+  position:relative;
+  width: 90%;
+  left:5%;
+  top:1em;
+  right: 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box {
+  display:inline-block;
+  width: 4em;
+  height: 4em;
+  border: 1px black solid;
+  margin: 1px;
+  line-height:4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boxes {
+  margin-top:1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.found {
+  background-color: lime;
 }
 
-.App-link {
-  color: #61dafb;
+.guess {
+  background-color: yellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.badGuess {
+  background-color: red;
+}
+
+.impossible {
+  background-color: brown;
+}
+
+.inputs {
+  font-size: 1.5em;
+  height: 2em;
+  width: 100%;
+}
+.inputs input, .inputs select, .inputs button{
+  font-size: 1em;
+}
+div {
+  display:inline-block;
 }

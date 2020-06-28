@@ -25,11 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - name: Super-Linter
+      uses: docker://github/super-linter:;latest
     - run: npm run build --if-present
     - run: npm test
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Super-Linter
-      uses: docker://github/super-linter@v2.2.0
 

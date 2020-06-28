@@ -1,22 +1,22 @@
 .app {
-  position:relative;
+  position: relative;
   width: 90%;
-  left:5%;
-  top:1em;
+  left: 5%;
+  top: 1em;
   right: 5%;
 }
 
 .box {
-  display:inline-block;
+  display: inline-block;
   width: 4em;
   height: 4em;
   border: 1px black solid;
   margin: 1px;
-  line-height:4em;
+  line-height: 4em;
 }
 
 .boxes {
-  margin-top:1em;
+  margin-top: 1em;
 }
 
 .found {
@@ -41,7 +41,9 @@
   width: 100%;
   margin-bottom: 1em;
 }
-.inputs input, .inputs select, .inputs button{
+
+.inputs input,
+.inputs select,
+.inputs button {
   font-size: 1em;
 }
-

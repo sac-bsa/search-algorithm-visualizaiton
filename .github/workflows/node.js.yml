@@ -32,10 +32,4 @@ jobs:
     steps:
     - name: Super-Linter
       uses: docker://github/super-linter@v2.2.0
-      env:
-        VALIDATE_YAML:true
-        VALIDATE_JSON:true
-        VALIDATE_JAVASCRIPT_ES:true
-        VALIDATE_CSS:true
-
 

@@ -1,0 +1,15 @@
+name: The code builds
+on: [push]
+jobs:
+  Build-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building code because of ${{ github.event_name }} event"
+      - name: Check out code
+        uses: actions/checkout@v2
+      - run: echo "The ${{ github.repository }} repo has been cloned."
+      - run: git log -n 1
+      - run: npm run build
+      - run: npm test
+      - run: echo "This job's status is ${{ job.status }}"
+

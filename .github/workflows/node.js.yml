@@ -30,7 +30,6 @@ jobs:
       env:
         VALIDATE_YAML: true
         VALIDATE_JSON: true
-        VALIDATE_MD: true
         VALIDATE_JAVASCRIPT_ES: true
         VALIDATE_CSS: true
     - run: npm run build --if-present

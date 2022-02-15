@@ -3,12 +3,21 @@ on: [push]
 jobs:
   Build-Code:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
       - run: echo "Building code because of ${{ github.event_name }} event"
       - name: Check out code
         uses: actions/checkout@v2
       - run: echo "The ${{ github.repository }} repo has been cloned."
       - run: git log -n 1
+      - name: Using Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g react-scripts
+      - run: npm ci
       - run: npm run build
       - run: npm test
       - run: echo "This job's status is ${{ job.status }}"
